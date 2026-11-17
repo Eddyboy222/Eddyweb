@@ -218,7 +218,7 @@ function App() {
             />
 
             <div className="relative mx-auto max-w-275 text-center">
-              <h1 className="mx-auto max-w-237.5 font-['Beinora'] text-5xl lg:text-7xl md:text-6xl font-black leading-[0.98] md:font-black">
+              <h1 className="mx-auto max-w-237.5 font-['Beinora'] text-6xl lg:text-7xl md:text-6xl font-black leading-[0.98] md:font-black">
                 Turning ideas into{" "}
                 <span className="text-[#f7941d]">visual experiences.</span>
               </h1>
