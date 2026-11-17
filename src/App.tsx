@@ -137,7 +137,7 @@ function App() {
   const sectionTitle =
     "font-[Manrope] text-4xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-5xl lg:text-[64px]";
   const textLink =
-    "inline-flex w-fit items-center gap-3 border-b border-[#e85f4b] pb-2 text-xs font-semibold transition-colors hover:text-[#e85f4b]";
+    "inline-flex w-fit items-center gap-3 border-b border-[#f7941d] pb-2 text-xs font-semibold transition-colors hover:text-[#f7941d]";
 
   return (
     <>
@@ -148,23 +148,20 @@ function App() {
       .hero-gallery:hover .hero-gallery-track { animation-play-state: paused; }
       @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
     `}</style>
-      <div className="min-h-screen overflow-x-hidden bg-[#f8f7f3] font-['DM_Sans',sans-serif] text-[#24231f] selection:bg-[#e85f4b] selection:text-white mb-30">
+      <div className="min-h-screen overflow-x-hidden bg-[#f8f7f3] font-['DM_Sans',sans-serif] text-[#24231f] selection:bg-[#f7941d] selection:text-white mb-30">
         {/* Header and navigation */}
-        <header className="fixed top-0 z-40 w-full grid h-18 grid-cols-[1fr_auto_1fr] items-center border-b border-black/[0.07] bg-[#f8f7f3]/95 px-5 backdrop-blur-xl sm:h-[78px] sm:px-[6.1vw]">
+        <header className="fixed top-0 z-40 w-full grid h-18 grid-cols-[1fr_auto_1fr] items-center border-b border-black/[0.07] bg-[#f8f7f3]/95 px-5 backdrop-blur-xl sm:h-19.5 sm:px-[6.1vw]">
           <a
             className="flex w-fit items-center gap-2.5 font-[Manrope] text-[13px] font-bold tracking-[-.5px]"
             href="#home"
             aria-label="Eddy Graphics home"
           >
-            <span className="text-[25px] font-extrabold tracking-[-2px] text-[#e85f4b]">
-              eg.
-            </span>
-            <span>
-              Eddy <span className="font-medium">Graphics</span>
+            <span className="text-[25px] font-extrabold tracking-[-2px] text-[#f7941d]">
+              <img src="/images/logo/Asset 2.png" alt="Eddy Graphics logo" className="h-9 w-11 sm:h-9 sm:w-11" />
             </span>
           </a>
           <button
-            className="col-start-3 ml-auto flex h-10 w-10 flex-col items-center justify-center gap-[5px] md:hidden"
+            className="col-start-3 ml-auto flex h-10 w-10 flex-col items-center justify-center gap-1.25 md:hidden"
             type="button"
             aria-label={
               menuOpen ? "Close navigation menu" : "Open navigation menu"
@@ -190,7 +187,7 @@ function App() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="border-b border-[#dedcd5]/70 py-3 text-xs font-medium text-[#5f5c55] transition-colors hover:text-[#e85f4b] md:border-0 md:py-0"
+                className="border-b border-[#dedcd5]/70 py-3 text-xs font-medium text-[#5f5c55] transition-colors hover:text-[#f7941d] md:border-0 md:py-0"
               >
                 {item.label}
               </a>
@@ -208,26 +205,26 @@ function App() {
           {/* Hero section */}
           <section
             id="home"
-            className="relative isolate overflow-hidden px-5 pb-14 pt-35 sm:px-[6.1vw] sm:pb-20 sm:pt-28 lg:pb-10 lg:pt-30"
+            className="relative isolate overflow-hidden px-5 pb-14 pt-35 sm:px-[6.1vw] sm:pb-12 sm:pt-28 lg:pb-10 lg:pt-30"
           >
             {/* Hero background image placeholder */}
             <div
               className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage:
-                  "linear-gradient(rgba(248,247,243,0.72), rgba(248,247,243,0.72)), url('/images/hero-background.jpg')",
+                  "linear-gradient(rgba(248,247,243,0.50), rgba(248,247,243,0.50)), url('/images/hero-background2.png')",
               }}
               aria-hidden="true"
             />
 
             <div className="relative mx-auto max-w-275 text-center">
-              <h1 className="mx-auto max-w-237.5 font-['Beinora'] text-5xl lg:text-7xl font-black leading-[0.98] md:font-black">
+              <h1 className="mx-auto max-w-237.5 font-['Beinora'] text-5xl lg:text-7xl md:text-6xl font-black leading-[0.98] md:font-black">
                 Turning ideas into{" "}
-                <span className="text-[#e85f4b]">visual experiences.</span>
+                <span className="text-[#f7941d]">visual experiences.</span>
               </h1>
 
               <a
-                className={`${textLink} mx-auto mt-5 sm:mt-4`}
+                className={`${textLink} mx-auto mt-6 sm:mt-4`}
                 href="#portfolio"
               >
                 Explore my work <ArrowIcon />
@@ -251,7 +248,7 @@ function App() {
                     >
                       {projects.map((project, projectIndex) => (
                         <button
-                          className="group relative aspect-square w-[66vw] max-w-[340px] shrink-0 overflow-hidden bg-[#e9e6df] sm:w-[31vw] lg:w-[24vw]"
+                          className="group relative aspect-square w-[66vw] max-w-85 shrink-0 overflow-hidden bg-[#e9e6df] sm:w-[31vw] lg:w-[24vw]"
                           key={`${setIndex}-${project.src}`}
                           type="button"
                           aria-label={`Preview ${project.title}`}
@@ -271,7 +268,7 @@ function App() {
                   ))}
                 </div>
               </div>
-              <div className="flex min-h-[58px] items-center justify-between gap-3 px-4 sm:px-6">
+              <div className="flex min-h-14.5 items-center justify-between gap-3 px-4 sm:px-6">
                 <span className="hidden text-[10px] font-semibold uppercase tracking-[.17em] text-[#76736c] sm:block">
                   Selected work
                 </span>
@@ -282,7 +279,7 @@ function App() {
                   {projects.map((project, index) => (
                     <button
                       key={project.src}
-                      className={`h-[5px] rounded-full transition-all ${activeSlide === index ? "w-7 bg-[#e85f4b]" : "w-1.5 bg-[#c9c6bd] hover:bg-[#76736c]"}`}
+                      className={`h-1.25 rounded-full transition-all ${activeSlide === index ? "w-7 bg-[#f7941d]" : "w-1.5 bg-[#c9c6bd] hover:bg-[#76736c]"}`}
                       type="button"
                       aria-label={`Show slide ${index + 1}: ${project.title}`}
                       aria-current={activeSlide === index ? "true" : undefined}
@@ -292,19 +289,19 @@ function App() {
                 </div>
                 <div className="flex items-center gap-3">
                   <button
-                    className="text-lg transition-colors hover:text-[#e85f4b]"
+                    className="text-lg transition-colors hover:text-[#f7941d]"
                     type="button"
                     aria-label="Previous design"
                     onClick={() => scrollToSlide(activeSlide - 1)}
                   >
                     ←
                   </button>
-                  <span className="min-w-[55px] text-center text-[10px] tabular-nums text-[#76736c]">
+                  <span className="min-w-13.75 text-center text-[10px] tabular-nums text-[#76736c]">
                     {String(activeSlide + 1).padStart(2, "0")} /{" "}
                     {String(projects.length).padStart(2, "0")}
                   </span>
                   <button
-                    className="text-lg transition-colors hover:text-[#e85f4b]"
+                    className="text-lg transition-colors hover:text-[#f7941d]"
                     type="button"
                     aria-label="Next design"
                     onClick={() => scrollToSlide(activeSlide + 1)}
@@ -325,16 +322,16 @@ function App() {
               <div>
                 <p className={eyebrow}>A few things I&apos;ve made</p>
                 <h2 className={sectionTitle}>
-                  Selected <span className="text-[#e85f4b]">work.</span>
+                  Selected <span className="text-[#f7941d]">work.</span>
                 </h2>
               </div>
-              <p className="max-w-[330px] text-sm leading-6 text-[#76736c]">
+              <p className="max-w-82.5 text-sm leading-6 text-[#76736c]">
                 Every project starts with a good idea and ends with a visual
                 worth remembering.
               </p>
             </div>
             <div
-              className="mb-8 flex gap-2 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              className="mb-8 flex gap-2 overflow-x-auto pb-3 scrollbar-none [&::-webkit-scrollbar]:hidden"
               aria-label="Filter portfolio by category"
             >
               {categories.map((category) => (
@@ -358,7 +355,7 @@ function App() {
                   aria-label={`Open ${project.title} project preview`}
                   className="group text-left"
                 >
-                  <span className="relative block aspect-[4/4.5] overflow-hidden bg-[#e9e6df]">
+                  <span className="relative block aspect-4/4.5 overflow-hidden bg-[#e9e6df]">
                     <img
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
                       src={project.src}
@@ -392,14 +389,14 @@ function App() {
             id="about"
             className="bg-[#efede7] px-5 py-16 sm:px-[6.1vw] lg:py-28"
           >
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-350">
               <p className={eyebrow}>A little about me</p>
               <div className="grid gap-8 md:grid-cols-[1.2fr_.8fr] md:items-end">
                 <h2 className="font-[Manrope] text-4xl font-semibold leading-[1.08] tracking-[-.055em] sm:text-5xl lg:text-[68px]">
                   Good design isn&apos;t just seen.{" "}
-                  <span className="text-[#e85f4b]">It&apos;s felt.</span>
+                  <span className="text-[#f7941d]">It&apos;s felt.</span>
                 </h2>
-                <div className="max-w-[430px]">
+                <div className="max-w-107.5">
                   <p className="mb-6 text-sm leading-7 text-[#66635c]">
                     Eddy Graphics is a creative design brand turning ideas into
                     impactful, professional visuals. From the first spark to the
@@ -412,7 +409,7 @@ function App() {
                 </div>
               </div>
               <div className="mt-16 flex items-center gap-3 border-t border-[#d8d5cc] pt-5">
-                <span className="font-[Manrope] text-3xl font-extrabold tracking-[-2px] text-[#e85f4b]">
+                <span className="font-[Manrope] text-3xl font-extrabold tracking-[-2px] text-[#f7941d]">
                   eg.
                 </span>
                 <span className="text-[11px] text-[#76736c]">
@@ -432,10 +429,10 @@ function App() {
                 <p className={eyebrow}>What I can help with</p>
                 <h2 className={sectionTitle}>
                   Made for{" "}
-                  <span className="text-[#e85f4b]">your next idea.</span>
+                  <span className="text-[#f7941d]">your next idea.</span>
                 </h2>
               </div>
-              <p className="max-w-[330px] text-sm leading-6 text-[#76736c]">
+              <p className="max-w-82.5 text-sm leading-6 text-[#76736c]">
                 Flexible creative support for brands, businesses and moments
                 that matter.
               </p>
@@ -444,15 +441,15 @@ function App() {
               {services.map((service, index) => (
                 <div
                   key={service}
-                  className="group flex min-h-[100px] items-center gap-5 border-b border-[#dedcd5] py-5 sm:px-5 [&:nth-child(odd)]:sm:border-r [&:nth-child(even)]:sm:pl-8"
+                  className="group flex min-h-25 items-center gap-5 border-b border-[#dedcd5] py-5 sm:px-5 odd:sm:border-r even:sm:pl-8"
                 >
-                  <span className="text-[10px] text-[#e85f4b]">
+                  <span className="text-[10px] text-[#f7941d]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <h3 className="flex-1 font-[Manrope] text-lg font-semibold tracking-[-.03em] sm:text-xl">
                     {service}
                   </h3>
-                  <span className="text-lg text-[#9a978f] transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#e85f4b]">
+                  <span className="text-lg text-[#9a978f] transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#f7941d]">
                     ↗
                   </span>
                 </div>
@@ -465,24 +462,24 @@ function App() {
             id="contact"
             className="bg-[#24231f] px-5 py-16 text-[#f8f7f3] sm:px-[6.1vw] lg:py-28"
           >
-            <div className="mx-auto max-w-[1400px]">
+            <div className="mx-auto max-w-350">
               <p className="mb-8 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[.2em] text-white/55">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#e85f4b]" /> Have
+                <span className="h-1.5 w-1.5 rounded-full bg-[#f7941d]" /> Have
                 something in mind?
               </p>
               <div className="grid gap-10 md:grid-cols-[1.2fr_.8fr] md:items-end">
                 <h2 className="font-[Manrope] text-6xl font-semibold leading-[.95] tracking-[-.07em] sm:text-7xl lg:text-[110px]">
                   Let&apos;s make
                   <br />
-                  <span className="text-[#e85f4b]">it happen.</span>
+                  <span className="text-[#f7941d]">it happen.</span>
                 </h2>
-                <div className="max-w-[390px]">
+                <div className="max-w-97.5">
                   <p className="mb-7 text-sm leading-6 text-white/65">
                     Have an idea, a brief, or just a question? I&apos;d love to
                     hear what you&apos;re working on.
                   </p>
                   <a
-                    className={`inline-flex w-full items-center justify-between border-b border-white/25 pb-3 text-sm font-medium ${!emailHref ? "pointer-events-none opacity-50" : "hover:text-[#e85f4b]"}`}
+                    className={`inline-flex w-full items-center justify-between border-b border-white/25 pb-3 text-sm font-medium ${!emailHref ? "pointer-events-none opacity-50" : "hover:text-[#f7941d]"}`}
                     href={emailHref}
                     aria-disabled={!emailHref}
                   >
@@ -529,7 +526,7 @@ function App() {
                         ? "noreferrer"
                         : undefined
                     }
-                    className={`flex flex-col gap-3 border-b border-white/15 py-5 sm:border-b-0 sm:py-6 ${!item.href ? "pointer-events-none opacity-50" : "hover:text-[#e85f4b]"} sm:[&:not(:last-child)]:border-r sm:[&:not(:last-child)]:border-white/15 sm:[&:not(:last-child)]:pr-6 sm:[&:not(:first-child)]:pl-6`}
+                    className={`flex flex-col gap-3 border-b border-white/15 py-5 sm:border-b-0 sm:py-6 ${!item.href ? "pointer-events-none opacity-50" : "hover:text-[#f7941d]"} sm:not-last:border-r sm:not-last:border-white/15 sm:not-last:pr-6 sm:not-first:pl-6`}
                   >
                     <span className="text-sm font-semibold">{item.label}</span>
                     <span className="text-[11px] text-white/45">
@@ -548,7 +545,7 @@ function App() {
             className="flex w-fit items-center gap-2 font-[Manrope] text-[13px] font-bold"
             href="#home"
           >
-            <span className="text-2xl font-extrabold tracking-[-2px] text-[#e85f4b]">
+            <span className="text-2xl font-extrabold tracking-[-2px] text-[#f7941d]">
               eg.
             </span>{" "}
             Eddy Graphics
@@ -561,7 +558,7 @@ function App() {
               <a
                 href={item.href}
                 key={item.href}
-                className="text-[11px] text-[#5f5c55] hover:text-[#e85f4b]"
+                className="text-[11px] text-[#5f5c55] hover:text-[#f7941d]"
               >
                 {item.label}
               </a>
@@ -573,7 +570,7 @@ function App() {
               aria-disabled={!instagramHref}
               target={instagramHref ? "_blank" : undefined}
               rel={instagramHref ? "noreferrer" : undefined}
-              className="text-[11px] hover:text-[#e85f4b]"
+              className="text-[11px] hover:text-[#f7941d]"
             >
               Instagram ↗
             </a>
@@ -582,7 +579,7 @@ function App() {
               aria-disabled={!whatsappHref}
               target={whatsappHref ? "_blank" : undefined}
               rel={whatsappHref ? "noreferrer" : undefined}
-              className="text-[11px] hover:text-[#e85f4b]"
+              className="text-[11px] hover:text-[#f7941d]"
             >
               WhatsApp ↗
             </a>
@@ -595,7 +592,7 @@ function App() {
         {/* Project preview lightbox */}
         {selectedProject && (
           <div
-            className="fixed inset-0 z-[100] grid place-items-center bg-[#171613]/85 p-4 backdrop-blur-sm"
+            className="fixed inset-0 z-100 grid place-items-center bg-[#171613]/85 p-4 backdrop-blur-sm"
             role="presentation"
             onClick={(event) => {
               if (event.target === event.currentTarget)
@@ -603,7 +600,7 @@ function App() {
             }}
           >
             <div
-              className="relative max-h-[92vh] w-full max-w-[900px] overflow-y-auto bg-[#f8f7f3] shadow-2xl"
+              className="relative max-h-[92vh] w-full max-w-225 overflow-y-auto bg-[#f8f7f3] shadow-2xl"
               role="dialog"
               aria-modal="true"
               aria-label={`${selectedProject.title} project preview`}
@@ -628,7 +625,7 @@ function App() {
                     {selectedProject.title}
                   </h2>
                 </div>
-                <p className="max-w-[360px] text-xs leading-6 text-[#76736c]">
+                <p className="max-w-90 text-xs leading-6 text-[#76736c]">
                   {selectedProject.description}
                 </p>
               </div>
