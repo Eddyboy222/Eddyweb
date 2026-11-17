@@ -212,7 +212,7 @@ function App() {
               className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage:
-                  "linear-gradient(rgba(248,247,243,0.50), rgba(248,247,243,0.50)), url('/images/hero-background2.png')",
+                  "linear-gradient(rgba(248,247,243,0.50), rgba(248,247,243,0.50)), url('')",
               }}
               aria-hidden="true"
             />
