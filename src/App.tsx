@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const CONTACT = { whatsappPhone: "", instagramUrl: "", email: "" };
+const CONTACT = { whatsappPhone: "2348166945354", instagramUrl: "https://www.instagram.com/_eddy_graphics_/", email: "nfiajiedwin@gmail.com" };
 const categories = [
   "All work",
   "Social Media Designs",
@@ -62,6 +62,27 @@ const projects: Project[] = [
     category: "Event Flyers",
     description:
       "A second direction for an event campaign, designed to stand out.",
+  },
+  {
+    src: "/images/Auto's-Bridge-poster-s2.png",
+    title: "Car Brand E-Poster",
+    category: "Social Media Designs",
+    description:
+      ".........",
+  },
+  {
+    src: "/images/Mr. and Miss CYON s2.png",
+    title: ".........",
+    category: "Social Media Designs",
+    description:
+      ".........",
+  },
+  {
+    src: "/images/July.png",
+    title: ".........",
+    category: "Social Media Designs",
+    description:
+      ".........",
   },
 ];
 const navigation = [
@@ -316,7 +337,7 @@ function App() {
           {/* Portfolio grid and category filters */}
           <section
             id="portfolio"
-            className="mx-auto max-w-[1600px] px-5 py-16 sm:px-[6.1vw] lg:py-28"
+            className="mx-auto max-w-[1600px] px-5 py-12 sm:px-[6.1vw] lg:py-10"
           >
             <div className="mb-9 flex flex-col justify-between gap-6 md:mb-12 md:flex-row md:items-end">
               <div>
@@ -545,25 +566,8 @@ function App() {
             className="flex w-fit items-center gap-2 font-[Manrope] text-[13px] font-bold"
             href="#home"
           >
-            <span className="text-2xl font-extrabold tracking-[-2px] text-[#f7941d]">
-              eg.
-            </span>{" "}
             Eddy Graphics
           </a>
-          <nav
-            className="flex flex-wrap gap-x-5 gap-y-3"
-            aria-label="Footer navigation"
-          >
-            {navigation.map((item) => (
-              <a
-                href={item.href}
-                key={item.href}
-                className="text-[11px] text-[#5f5c55] hover:text-[#f7941d]"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
           <div className="flex gap-5">
             <a
               href={instagramHref}
