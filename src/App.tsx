@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react"
 
 const CONTACT = { whatsappPhone: "2348166945354", instagramUrl: "https://www.instagram.com/_eddy_graphics_/", email: "nfiajiedwin@gmail.com" };
 const categories = [
@@ -431,7 +432,7 @@ function App() {
               </div>
               <div className="mt-16 flex items-center gap-3 border-t border-[#d8d5cc] pt-5">
                 <span className="font-[Manrope] text-3xl font-extrabold tracking-[-2px] text-[#f7941d]">
-                  eg.
+                  <img src="/images/logo/Asset 2.png" alt="Eddy Graphics logo" className="h-9 w-11 sm:h-9 sm:w-11" />
                 </span>
                 <span className="text-[11px] text-[#76736c]">
                   Creative visuals. Thoughtfully made.
@@ -592,6 +593,11 @@ function App() {
             © {new Date().getFullYear()} Eddy Graphics
           </span>
         </footer>
+
+        <div>
+      {/* ... */}
+      <Analytics />
+    </div>
 
         {/* Project preview lightbox */}
         {selectedProject && (
